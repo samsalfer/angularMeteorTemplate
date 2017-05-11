@@ -4,6 +4,7 @@ import { Config, Runner } from 'angular-ecmascript/module-helpers';
 
 
 import testTemplateUrl from '../templates/test.html';
+import testChildTemplateUrl from '../templates/testChild.html';
 
 
 class RoutesConfig extends Config {
@@ -15,6 +16,14 @@ class RoutesConfig extends Config {
 
   configure() {
     this.$stateProvider
+
+        .state('structure', {
+          url: '/structure/:structureId',
+
+          templateUrl: testChildTemplateUrl,
+          controller: 'OneStructureCtrl as oneStruc'
+        })
+
       .state('test', {
         url: '/test',
         templateUrl: testTemplateUrl,

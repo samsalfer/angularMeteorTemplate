@@ -12,6 +12,8 @@ import { Meteor } from 'meteor/meteor';
 // Modules
 
 import StructureCtrl from '../controllers/structure.controller';
+import OneStructureCtrl from '../controllers/oneStructure.controller';
+
 
 import Routes from '../routes';
 
@@ -26,6 +28,7 @@ Angular.module(App, [
 
 new Loader(App)
   .load(StructureCtrl)
+  .load(OneStructureCtrl)
   .load(Routes);
 
 // Startup

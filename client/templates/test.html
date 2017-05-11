@@ -1,5 +1,5 @@
 <li ng-repeat="structure in struc.data">
-    <p>{{ structure.name }}
+    <p><a ng-href="#!/structure/{{ structure._id }}">{{ structure.name }}</a>
       <button class="delete" ng-click="struc.deleteStructure(structure)">&times;</button>
     </p>
 
