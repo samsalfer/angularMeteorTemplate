@@ -1,0 +1,14 @@
+<li ng-repeat="structure in struc.data">
+    <p>{{ structure.name }}
+      <button class="delete" ng-click="struc.deleteStructure(structure)">&times;</button>
+    </p>
+
+</li>
+
+
+
+
+  <form ng-submit="struc.createStructure()">
+    <input ng-model="struc.newName" type="text" name="text" placeholder="New Structure"/>
+    <button ng-click="struc.createStructure()" >Pulse it</button>
+  </form>
